@@ -1,0 +1,164 @@
+/* Simple dashboard grid CSS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+}
+/* Assign grid instructions to our parent grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-areas:
+    "sidenav header"
+    "sidenav main"
+    "sidenav footer";
+  height: 100vh;
+}
+
+/* Give every child element its grid name */
+.header {
+  grid-area: header;
+  background-color: #648ca6;
+}
+
+.sidenav {
+  grid-area: sidenav;
+}
+
+.main {
+  grid-area: main;
+  background-color: #edf2ef;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #648ca6;
+}
+
+.header,
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background-color: #323232;
+  color: aliceblue;
+}
+
+.sidenav {
+  display: flex; /* Will be hidden on mobile */
+  flex-direction: column;
+  grid-area: sidenav;
+  background-color: #9818d6;
+}
+
+.sidenav__list {
+  padding: 0;
+  margin-top: 85px;
+  list-style-type: none;
+}
+
+.sidenav__list-item {
+  padding: 20px 20px 20px 40px;
+  color: #ddd;
+}
+
+.sidenav__list-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 20px;
+  height: 150px; /* Force our height since we don't have actual content yet */
+  background-color: #e3e4e6;
+  color: slategray;
+}
+.main-overview {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(265px, 1fr)
+  ); /* Where the magic happens */
+  grid-auto-rows: 94px;
+  grid-gap: 30px;
+  margin: 40px;
+}
+
+.overviewcard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: #ffa41b;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.overviewcard__icon {
+  font-size: 1.5rem;
+}
+.overviewcard__info {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ededed;
+}
+
+.dropbtn {
+  background-color: #ededed;
+  color: black;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 150px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #9818d6;
+  color: white;
+}
+
+.sidenav__list-item {
+  font-size: 1.5rem;
+}
