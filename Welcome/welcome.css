@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Sofia');
+
+body, html {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(#e66465, #9198e5);
+    
+  }
+
+  .content{
+      height: 100vh;
+      background-image: url(doc.png);
+      background-position: center;
+      background-size:contain;
+      background-repeat: no-repeat;
+  }
+ 
+  .heading{
+      margin: 100px 300px;
+      font-size: 40px;
+      color:floralwhite;
+      font-family: 'Sofia', sans-serif;
+      text-shadow: 2px 2px 5px blue;
+      background-color: rgb(51, 103, 201);
+      
+      
+  }
+ 
+.btn{
+
+    background-color: rgb(51, 103, 201);
+    color:floralwhite;
+    font-size: 22px;
+    margin-top : 10px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.nav{
+    padding-left: 1185px;    
+}
